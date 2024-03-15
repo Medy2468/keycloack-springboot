@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_keycloack_springboot?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+  application:
+    name: keycloack-springboot
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  h2:
+    console:
+      enabled: true
